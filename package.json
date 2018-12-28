@@ -1,0 +1,27 @@
+{
+  "name": "lenet-ts",
+  "version": "1.0.0",
+  "description": "LeNet-5 Neural Network with tfjs-node and Typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "lint": "tslint --project .",
+    "start": "node ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortimr/lenet-ts.git"
+  },
+  "author": "Iulian Rotaru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mortimr/lenet-ts/issues"
+  },
+  "homepage": "https://github.com/mortimr/lenet-ts#readme",
+  "dependencies": {
+    "@types/node": "^10.12.18",
+    "linted": "^1.0.5",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  }
+}
