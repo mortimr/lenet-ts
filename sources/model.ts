@@ -1,8 +1,8 @@
-import { layers, sequential, Model } from '@tensorflow/tfjs'
-import '@tensorflow/tfjs-node'
+import { layers, sequential, Model } from '@tensorflow/tfjs';
+import '@tensorflow/tfjs-node';
 
 export const buildModel = (): Model => {
-  const model = sequential()
+  const model = sequential();
 
   // First convolutional layer, receive 28x28x1 inputs, applies 8 filters
   model.add(
@@ -14,7 +14,7 @@ export const buildModel = (): Model => {
       activation: 'relu',
       kernelInitializer: 'VarianceScaling'
     })
-  )
+  );
 
   // First Max pooling
   model.add(
@@ -22,7 +22,7 @@ export const buildModel = (): Model => {
       poolSize: [2, 2],
       strides: [2, 2]
     })
-  )
+  );
 
   // Second convolutional layer, applies 16 layers
   model.add(
@@ -33,7 +33,7 @@ export const buildModel = (): Model => {
       activation: 'relu',
       kernelInitializer: 'VarianceScaling'
     })
-  )
+  );
 
   // Second Max Pooling
   model.add(
@@ -41,10 +41,10 @@ export const buildModel = (): Model => {
       poolSize: [2, 2],
       strides: [2, 2]
     })
-  )
+  );
 
   // Flattens from 2d to 1d
-  model.add(layers.flatten())
+  model.add(layers.flatten());
 
   // Fully connected layer
   model.add(
@@ -53,7 +53,7 @@ export const buildModel = (): Model => {
       kernelInitializer: 'VarianceScaling',
       activation: 'relu'
     })
-  )
+  );
 
   // Fully connected layer
   model.add(
@@ -62,7 +62,7 @@ export const buildModel = (): Model => {
       kernelInitializer: 'VarianceScaling',
       activation: 'softmax'
     })
-  )
+  );
 
-  return model
-}
+  return model;
+};

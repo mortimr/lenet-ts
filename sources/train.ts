@@ -1,7 +1,7 @@
 import { Model, tensor2d, tensor4d, Tensor2D, Tensor4D } from '@tensorflow/tfjs'
 import '@tensorflow/tfjs-node'
 import { Signale } from 'signale'
-import { flatten, zip, unzip } from 'lodash'
+import { flatten } from 'lodash'
 
 const ilog: Signale = new Signale({
   interactive: true
