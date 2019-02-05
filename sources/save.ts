@@ -1,6 +1,8 @@
-import { Model } from '@tensorflow/tfjs';
-import '@tensorflow/tfjs-node';
+import { Model } from '@tensorflow/tfjs'
+import '@tensorflow/tfjs-node'
+import { SaveResult } from '@tensorflow/tfjs-core/dist/io/io'
 
-export async function save_model(model: Model, path: string): Promise<void> {
-    await model.save(path);
-}
+export const saveModel = async (
+  model: Model,
+  path: string
+): Promise<SaveResult> => model.save(path)

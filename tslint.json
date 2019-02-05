@@ -1,8 +1,6 @@
 {
-  "extends": ["linted"],
+  "extends": ["linted", "tslint-config-prettier"],
   "linterOptions": {
-    "exclude": [
-      "sources/migrations/*"
-    ]
+    "exclude": ["sources/migrations/*"]
   }
 }
